@@ -2,8 +2,15 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>GitHub Pages Background Image</title>
+    <title>Centered Text</title>
     <style>
+        /* Center text both vertically and horizontally */
+        .centered-text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* This ensures the content is centered within the viewport height */
+        }
         body {
             background-image: url('https://pengu.s-ul.eu/pOHqXbL5'); /* Replace with the URL of your image */
             background-size: cover; /* Scales the background image to cover the entire viewport */
@@ -12,24 +19,11 @@
             font-family: Arial, sans-serif;
             color: #fff; /* Set text color to white or your desired color */
         }
-        header {
-            background-color: rgba(0, 0, 0, 0.6); /* Background color with opacity */
-            padding: 20px;
-        }
-        h1 {
-            font-size: 36px;
-        }
-        p {
-            font-size: 18px;
-        }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to My GitHub Pages</h1>
-    </header>
-    <main>
-        <p>This is a simple webpage with a background image hosted on GitHub Pages.</p>
-    </main>
+    <div class="centered-text">
+        <h1>This Text Is Centered</h1>
+    </div>
 </body>
 </html>
