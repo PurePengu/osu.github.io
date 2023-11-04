@@ -11,25 +11,24 @@
 }
 
 /* Style the collapsible list */
-.collapsible-list {
+.collapse-on-hover-list {
     list-style-type: none;
     padding: 0;
 }
 
-.collapsible {
+li {
     margin-bottom: 10px;
-}
-
-.collapsible-header {
     cursor: pointer;
-    display: block;
-    color: #fff;
 }
 
 /* Style the sublist items */
 .sublist {
     list-style-type: none;
     padding: 0;
-    margin-left: 15px; /* Indent sublists */
     display: none; /* Initially hide sublists */
+}
+
+/* Show the sublist when hovering over the list item */
+li:hover .sublist {
+    display: block;
 }
