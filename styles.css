@@ -1,35 +1,17 @@
-/* Define styles for the container, sidebar, and content */
+/* Define styles for the container and button */
 .container {
-    display: flex;
-}
-
-.sidebar {
-    width: 200px;
-    background-color: #333;
-    color: #fff;
+    text-align: center;
     padding: 20px;
 }
 
-/* Style the collapsible list */
-.collapse-on-hover-list {
-    list-style-type: none;
-    padding: 0;
-}
-
-.collapsible {
-    margin-bottom: 10px;
-    cursor: pointer;
+button {
+    background-color: #007BFF;
     color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
 }
 
-/* Style the sublist items */
-.sublist {
-    list-style-type: none;
-    padding: 0;
-    display: none; /* Initially hide sublists */
-}
-
-/* Show the sublist when hovering over the list item */
-.collapsible:hover .sublist {
-    display: block;
+button:hover {
+    background-color: #0056b3;
 }
