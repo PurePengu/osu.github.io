@@ -10,21 +10,20 @@
     padding: 20px;
 }
 
-/* Style the expandable list */
-.expandable-list {
+/* Style the collapsible list */
+.collapsible-list {
     list-style-type: none;
     padding: 0;
 }
 
-li {
+.collapsible {
     margin-bottom: 10px;
 }
 
-a {
-    text-decoration: none;
-    color: #fff;
+.collapsible-header {
     cursor: pointer;
     display: block;
+    color: #fff;
 }
 
 /* Style the sublist items */
