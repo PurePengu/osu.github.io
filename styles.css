@@ -16,9 +16,10 @@
     padding: 0;
 }
 
-li {
+.collapsible {
     margin-bottom: 10px;
     cursor: pointer;
+    color: #fff;
 }
 
 /* Style the sublist items */
@@ -29,6 +30,6 @@ li {
 }
 
 /* Show the sublist when hovering over the list item */
-li:hover .sublist {
+.collapsible:hover .sublist {
     display: block;
 }
