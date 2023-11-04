@@ -2,32 +2,29 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Collapsible List</title>
+    <title>Collapse on Hover List</title>
     <link rel="stylesheet" type="text/css" href="styles.css"> <!-- Link to your external CSS file -->
 </head>
 <body>
     <div class="container">
         <!-- Left sidebar with collapsible list -->
         <div class="sidebar">
-            <ul class="collapsible-list">
-                <li class="collapsible">
-                    <div class="collapsible-header">Section 1</div>
+            <ul class="collapse-on-hover-list">
+                <li>Section 1
                     <ul class="sublist">
-                        <li><a href="#section1.1">Subsection 1.1</a></li>
-                        <li><a href="#section1.2">Subsection 1.2</a></li>
+                        <li>Subsection 1.1</li>
+                        <li>Subsection 1.2</li>
                     </ul>
                 </li>
-                <li class="collapsible">
-                    <div class="collapsible-header">Section 2</div>
+                <li>Section 2
                     <ul class="sublist">
-                        <li><a href="#section2.1">Subsection 2.1</a></li>
+                        <li>Subsection 2.1</li>
                     </ul>
                 </li>
-                <li class="collapsible">
-                    <div class="collapsible-header">Section 3</div>
+                <li>Section 3
                     <ul class="sublist">
-                        <li><a href="#section3.1">Subsection 3.1</a></li>
-                        <li><a href="#section3.2">Subsection 3.2</a></li>
+                        <li>Subsection 3.1</li>
+                        <li>Subsection 3.2</li>
                     </ul>
                 </li>
             </ul>
@@ -35,22 +32,8 @@
         
         <!-- Main content sections -->
         <div class="content">
-            <section id="section1">
-                <h2>Section 1</h2>
-                <p>This is the content of Section 1.</p>
-            </section>
-            <section id="section1.1">
-                <h3>Subsection 1.1</h3>
-                <p>This is the content of Subsection 1.1.</p>
-            </section>
-            <section id="section1.2">
-                <h3>Subsection 1.2</h3>
-                <p>This is the content of Subsection 1.2.</p>
-            </section>
             <!-- Sections for other items omitted for brevity -->
         </div>
     </div>
-
-    <script src="script.js"></script> <!-- Include the JavaScript file for the collapsible functionality -->
 </body>
 </html>
