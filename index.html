@@ -2,29 +2,35 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>osu! page</title>
-    <link rel="icon" href="https://github.com/PurePengu/osu.github.io/blob/main/Frame%203.ico" type="image/x-icon">
-    <style>
-        /* Center text both vertically and horizontally */
-        .centered-text {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh; /* This ensures the content is centered within the viewport height */
-        }
-        body {
-            background-image: url('https://pengu.s-ul.eu/pOHqXbL5');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed; /* Keeps the background fixed while scrolling */
-            font-family: Arial, sans-serif;
-            color: #fff;
-        }
-    </style>
+    <title>Clickable List</title>
+    <link rel="stylesheet" type="text/css" href="styles.css"> <!-- Link to your external CSS file -->
 </head>
 <body>
-    <div class="centered-text">
-        <h1>This Text Is Centered</h1>
+    <div class="container">
+        <!-- Left sidebar with clickable list -->
+        <div class="sidebar">
+            <ul>
+                <li><a href="#section1">Section 1</a></li>
+                <li><a href="#section2">Section 2</a></li>
+                <li><a href="#section3">Section 3</a></li>
+            </ul>
+        </div>
+        
+        <!-- Main content sections -->
+        <div class="content">
+            <section id="section1">
+                <h2>Section 1</h2>
+                <p>This is the content of Section 1.</p>
+            </section>
+            <section id="section2">
+                <h2>Section 2</h2>
+                <p>This is the content of Section 2.</p>
+            </section>
+            <section id="section3">
+                <h2>Section 3</h2>
+                <p>This is the content of Section 3.</p>
+            </section>
+        </div>
     </div>
 </body>
 </html>
