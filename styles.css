@@ -1,0 +1,36 @@
+/* Define styles for the container, sidebar, and content */
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+/* Style the expandable list */
+.expandable-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+}
+
+/* Style the sublist items */
+.sublist {
+    list-style-type: none;
+    padding: 0;
+    margin-left: 15px; /* Indent sublists */
+    display: none; /* Initially hide sublists */
+}
