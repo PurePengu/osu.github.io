@@ -45,11 +45,17 @@
         html, body {
             overflow: hidden; /* Disable scrolling */
         }
+
+        .test {
+            list-style: none;
+            position: relative;
+            display: inline block;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <a href="https://www.example.com" display="flex">
+    <div class="test">
+                <a href="https://www.example.com" display="flex">
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
               <g clip-path="url(#clip0_2799_9)">
                 <path d="M1.91493 0L0.481262 3.82708V19.1299H5.73926V22H8.61026L11.4767 19.129H15.7804L21.5188 13.3925V0H1.91493ZM3.8271 1.91125H19.6075V12.4337L16.2598 15.7813H11L8.1336 18.6478V15.7813H3.8271V1.91125ZM9.08876 11.4785H11V5.74017H9.08876V11.4785ZM14.3458 11.4785H16.258V5.74017H14.3458V11.4785Z" fill="#656565"/>
@@ -61,6 +67,8 @@
               </defs>
             </svg>
         </a>
+    </div>
+    <div class="container">
         <img class="image" src="https://a.ppy.sh/19381776?1696735826.png">
         <h1 class="text large-font">Patchouli's Library</h1>
         <h3 class="text small-font">
