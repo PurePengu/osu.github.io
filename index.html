@@ -6,22 +6,15 @@
     <link rel="icon" href="https://pengu.s-ul.eu/XKTc6D96" type="image/x-icon">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap');
-        @keyframes grayscaleToWhite {
-            from {
-                filter: grayscale(100%) brightness(100%);
-            }
-            to {
-                filter: grayscale(100%) brightness(200%);
-            }
+
+        .image-t {
+            transition: filter 0.3s;
         }
-        .image-animation {
-            filter: grayscale(100%) brightness(100%); /* Initial grayscale and brightness */
-            transition: filter 1s; /* Smooth transition effect */
+
+        .image-t:hover {
+            filter: brightness(200%);
         }
-        .image-animation:hover {
-            filter: grayscale(100%) brightness(20%); /* Apply the hover effect */
-            animation: grayscaleToWhite 1s forwards; /* Play the animation on hover */
-        }
+
         .container {
             display: flex;
             flex-direction: column;
@@ -64,13 +57,8 @@
             position: fixed;
             top: 0;
             right: 0;
-            padding: 10px;
+            text-decoration: none;
         }
-        .image-white {
-            filter: grayscale(100%) brightness(200%); /* Make it grayscale and brighter */
-        }
-
-        
         footer {
             font-family: 'Roboto Mono', sans-serif;
             color: #CCCCCC;
@@ -86,8 +74,11 @@
 </head>
 <body>
     <div class="test">
-        <img class="image-animation" src="https://pengu.s-ul.eu/Emmf5qes">
+        <a href="https://www.example.com">
+            <img class="image-t" src="https://pengu.s-ul.eu/Emmf5qes">
+        </a>
     </div>
+    </a>
     <div class="container">
         <img class="image" src="https://a.ppy.sh/19381776?1696735826.png">
         <h1 class="text large-font">Patchouli's Library</h1>
@@ -105,3 +96,4 @@
     </footer>
 </body>
 </html>
+
