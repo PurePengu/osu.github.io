@@ -45,10 +45,49 @@
         html, body {
             overflow: hidden; /* Disable scrolling */
         }
+
+
+
+
+
+        
+                /* Basic CSS for styling the to-do list */
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+
+        .completed {
+            text-decoration: line-through;
+            color: #999;
+        }
     </style>
 </head>
 <body>
-    <h1 class="text large-font">Goals</h1>
-    <p>test</p>
+    <h1>To-Do List</h1>
+    <h2>To Do</h2>
+    <ul>
+        <li>Task 1</li>
+        <li>Task 2</li>
+        <li>Task 3</li>
+    </ul>
+
+    <h2>In Progress</h2>
+    <ul>
+        <li>Task 4</li>
+    </ul>
+
+    <h2>Completed</h2>
+    <ul>
+        <li class="completed">Task 5 (Completed)</li>
+        <li class="completed">Task 6 (Completed)</li>
+    </ul>
 </body>
 </html>
