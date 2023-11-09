@@ -1,0 +1,95 @@
+/* VARIABLES */
+:root {
+    --background-color: #000000;
+    --hyperlink-color: #337ab7;
+    --text-color: #CCCCCC;
+}
+
+
+
+/* CLASSES*/
+html, body {
+    overflow: hidden; /* Disable scrolling */
+}
+body {
+    line-height: 10px;
+    font-family: monospace;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    opacity: 0; /* Set initial opacity to 0 */
+    animation: page-fadein 1s forwards;
+}
+footer {
+    display: inline-block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    text-align: center;
+    font-size: .6vw;
+}
+
+
+
+/* ANIMATIONS */
+@keyframes page-fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.a-img-transition {
+    transition: filter 0.3s;
+}
+.a-img-transition:hover {
+    filter: brightness(200%);
+}
+
+
+
+/* STYLES */
+.pfp-index {
+padding-bottom: 15px;
+  border-radius: 50%;
+  width: 7vw;
+}
+.txt {
+    font-weight: normal;
+    text-align: center;
+    color: var(--text-color);
+}
+.a-txt {
+  color: var(--hyperlink-color);
+  text-decoration: none;
+}
+.a-txt:hover {
+  text-decoration: underline;
+}
+.a-txt:visited {
+    text-decoration: none;
+}
+.a-img {
+  text-decoration: none;
+  display: inline-block;
+  width: 24px;
+  margin-left: 15px;
+}
+.a-img-sizing {
+    height: 24px;
+}
+.a-img-align {
+    display: flex; /* apply flex properties for: justify-content and align-items  */
+    flex-direction: row; /* Order items in a row */
+    justify-content: flex-end; /* Flex the items to the end of the viewport*/
+    padding-right: 10px;
+    padding-top: 10px;
+}
+.content {
+    display: flex; /* apply flex properties for: justify-content and align-items  */
+    flex-direction: column; /* Order items in a column */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    height: 100vh; /* Set the container to fill the viewport height */
+    }
