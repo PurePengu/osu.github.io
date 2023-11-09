@@ -12,7 +12,7 @@ html, body {
     overflow: hidden; /* Disable scrolling */
 }
 body {
-    line-height: 10px;
+    line-height: 110px;
     font-family: monospace;
     color: var(--text-color);
     background-color: var(--background-color);
