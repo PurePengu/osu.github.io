@@ -1,49 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8" content="width=device-width, initial-scale=1.0">
-      <title>patchouli's Library</title>
-      <link rel="icon" href="https://pengu.s-ul.eu/XKTc6D96" type="image/x-icon">
-      <link rel="stylesheet" type="text/css" href="style.css">
-      <style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+</head>
+<body>
 
-         .large-font {
-         font-size: 1.4vw;
-         }
-         .small-font {
-         font-size: .7vw;
-         }
-      </style>
-   </head>
-   <body>
-      <div class="a-img-align">
-         <a href="https://www.twitch.tv/penguu___ " class="a-img">
-         <img class="a-img-transition a-img-sizing" src="https://pengu.s-ul.eu/Emmf5qes">
-         </a>
-         <a href="https://www.youtube.com/channel/UCH7qd03Puo6-ycmfUQzplCg" class="a-img">
-         <img class="a-img-transition a-img-sizing" src="https://pengu.s-ul.eu/6noxM6Le">
-         </a>
-         <a href="https://myanimelist.net/profile/Pengu___" class="a-img">
-         <img class="a-img-transition a-img-sizing" src="https://pengu.s-ul.eu/12B9aT7j">
-         </a>
-         <a href="https://retroachievements.org/user/Pengu" class="a-img">
-         <img class="a-img-transition a-img-sizing" src="https://pengu.s-ul.eu/jyoPhzOM">
-         </a>
-      </div>
-      <div class="content">
-         <img class="pfp-index" src="https://a.ppy.sh/19381776?1696735826.png">
-         <h1 class="txt large-font">Patchouli's Library</h1>
-         <nav class="txt small-font">
-            <a href="https://osu.ppy.sh/users/19381776" class="a-txt">osu! Profile</a>
-            | 
-            <a href="about.html" class="a-txt">Goals</a>
-            | 
-            <a href="https://osu.ppy.sh/users/19381776" class="a-txt">Portfolio</a>
-         </nav>
-      </div>
-      <footer>
-         Updated: 05-11-23
-         <a href="https://osu.ppy.sh/users/19381776" class="a-txt">Notes</a>
-      </footer>
-   </body>
+    <!-- Your website content -->
+
+    <div id="visitorCounter">
+        Loading...
+    </div>
+
+    <script>
+        // Function to create or read a cookie
+        function getCookie(name) {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length === 2) return parts.pop().split(';').shift();
+        }
+
+        // Function to set a cookie
+        function setCookie(name, value, days) {
+            const expires = new Date();
+            expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
+            document.cookie = `${name}=${value};expires=${expires.toUTCString()};path=/`;
+        }
+
+        // Function to update the visitor counter
+        function updateVisitorCounter() {
+            let count = getCookie('visitorCount') || 0;
+            count++;
+
+            // Save the updated count in a cookie
+            setCookie('visitorCount', count, 365);
+
+            // Display the count
+            document.getElementById('visitorCounter').innerText = `You are visitor number: ${count}`;
+        }
+
+        // Call the updateVisitorCounter function when the page loads
+        window.onload = updateVisitorCounter;
+    </script>
+
+</body>
 </html>
