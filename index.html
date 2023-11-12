@@ -1,46 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flag Counter</title>
-</head>
-<body>
-
-    <!-- Your website content -->
-
-    <div id="flagCounter">
-        Loading...
-    </div>
-
     <script>
-        // Function to fetch visitor's country code (basic example)
-        function getCountryCode() {
-            // Replace this with your preferred method to get the country code
-            // This is a basic example, and you may want to use a more accurate method
-            return 'XX';
+        // Function to create or read a cookie
+        function getCookie(name) {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length === 2) return parts.pop().split(';').shift();
         }
 
-        // Function to update the flag counter
-        function updateFlagCounter() {
-            const countryCode = getCountryCode();
-
-            // Read the current count from localStorage
-            let counts = JSON.parse(localStorage.getItem('flagCounts')) || {};
-
-            // Increment the count for the current country
-            counts[countryCode] = (counts[countryCode] || 0) + 1;
-
-            // Save the updated counts back to localStorage
-            localStorage.setItem('flagCounts', JSON.stringify(counts));
-
-            // Display the count for the current country
-            document.getElementById('flagCounter').innerText = `Visitors from ${countryCode}: ${counts[countryCode] || 0}`;
+        // Function to set a cookie
+        function setCookie(name, value, days) {
+            const expires = new Date();
+            expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
+            document.cookie = `${name}=${value};expires=${expires.toUTCString()};path=/`;
         }
 
-        // Call the updateFlagCounter function when the page loads
-        window.onload = updateFlagCounter;
+        // Function to update the visitor counter
+        function updateVisitorCounter() {
+            let count = getCookie('visitorCount') || 0;
+            count++;
+
+            // Save the updated count in a cookie
+            setCookie('visitorCount', count, 365);
+
+            // Display the count
+            document.getElementById('visitorCounter').innerText = `You are visitor number: ${count}`;
+        }
+
+        // Call the updateVisitorCounter function when the page loads
+        window.onload = updateVisitorCounter;
     </script>
-
-</body>
-</html>
